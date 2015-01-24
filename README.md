@@ -21,7 +21,29 @@ run_analysis.R - the script used to create the output described in CodeBook.md.
                  [David's Project FAQ](https://class.coursera.org/getdata-010/forum/thread?thread_id=49#comment-435) 
                  forum thread. 
 
+###Data Files:
+- 'features_info.txt': Shows information about the variables used on the feature vector.
+
+- 'features.txt': List of all features.
+
+- 'activity_labels.txt': Links the class labels with their activity name.
+
+- 'train/X_train.txt': Training set.
+
+- 'train/y_train.txt': Training labels.
+
+- 'test/X_test.txt': Test set.
+
+- 'test/y_test.txt': Test labels.
+
 ###Usage:
+This script tidys the 
+[Smartphone Activity Data](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) 
+which is a cached version of the University of California, Irvine data described at 
+[Machine Learning Repository](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones).
+The data from the zip archive must be extracted and placed in the same directory
+in order to run the script.
+
 From the R prompt, change the working directory to where the run_analysis and 
 data folders are stored;
 
@@ -44,7 +66,7 @@ This script was run in R version 3.1.2 (2014-10-31) -- "Pumpkin Helmet" on the
 x86_64-apple-darwin10.8.0 (64-bit) platform. In addition, the following 
 packages were installed when running the script:
 
-* bitops - Bitwise Operations
+* data.table - Extension of data.frame
 * datasets - The R Datasets Package
 * graphics - The R Graphics Package
 * grDevices - The R Graphics Devices and Support for Colours and Fonts
@@ -53,5 +75,14 @@ packages were installed when running the script:
 * stats - The R Stats Package
 * utils - The R Utils Package
 
-###Author: apyle@github.com
+###Author: 
+apyle@github.com
+
+###Acknowlegements:
+The data set used in the project is from 
+
+Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. 
+Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly 
+Support Vector Machine. International Workshop of Ambient Assisted Living 
+(IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012
 
