@@ -17,24 +17,27 @@ CodeBook.md - a descriptive summary of the reproducable steps taken to produce
 
 run_analysis.R - the script used to create the output described in CodeBook.md.
                  This file goes in the UCI directory which also contains the 
-                 train and test folders as described in 
-                 [David's Project FAQ](https://class.coursera.org/getdata-010/forum/thread?thread_id=49#comment-435) 
-                 forum thread. 
+                 train and test folders as specified in the project instructions.
 
 ###Data Files:
-- 'features_info.txt': Shows information about the variables used on the feature vector.
+These files were extracted from the [Smartphone Activity Data](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) 
+zip archive file and moved to the same directory as the run_analysis script. 
+All of the train.txt files were taken from the train subdirectory while the 
+test.txt files were moved from the test subdirectory.
 
-- 'features.txt': List of all features.
+features_info.txt - Shows information about the variables used on the feature vector.
 
-- 'activity_labels.txt': Links the class labels with their activity name.
+features.txt - List of all features.
 
-- 'train/X_train.txt': Training set.
+activity_labels.txt - Links the class labels with their activity name.
 
-- 'train/y_train.txt': Training labels.
+X_train.txt - Training set.
 
-- 'test/X_test.txt': Test set.
+y_train.txt - Training labels.
 
-- 'test/y_test.txt': Test labels.
+X_test.txt - Test set.
+
+y_test.txt - Test labels.
 
 ###Usage:
 This script tidys the 
@@ -66,23 +69,18 @@ This script was run in R version 3.1.2 (2014-10-31) -- "Pumpkin Helmet" on the
 x86_64-apple-darwin10.8.0 (64-bit) platform. In addition, the following 
 packages were installed when running the script:
 
-* data.table - Extension of data.frame
-* datasets - The R Datasets Package
-* graphics - The R Graphics Package
-* grDevices - The R Graphics Devices and Support for Colours and Fonts
-* methods - Formal Methods and Classes
-* RCurl - General network (HTTP/FTP/...) client interface for R
-* stats - The R Stats Package
-* utils - The R Utils Package
+* data.table (version 1.9.2) - Extension of data.frame
+* dplyr (version 0.4.1) - A Grammar of Data Manipulation
+* plyr (version 1.8.1) - Tools for splitting, applying and combining data
 
 ###Author: 
 apyle@github.com
 
 ###Acknowlegements:
-The data set used in the project is from 
+The data set used in the project is from: 
 
 Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. 
-Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly 
-Support Vector Machine. International Workshop of Ambient Assisted Living 
+*Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly 
+Support Vector Machine*. International Workshop of Ambient Assisted Living 
 (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012
 
