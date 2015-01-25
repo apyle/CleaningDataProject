@@ -66,7 +66,21 @@ run_analysis <- function () {
         # reduce our data set to these fields, plus the Subject and Y data fields
         tidyData <- select(allData, myFields)
         tidyData$Subject <- allData$Subject
-        tidyData$Y <- allData$Y
+        tidyData$ActivityCode <- allData$Y
+        # TODO: Work on refactoring the hard coded V1:V543 column names in this 
+        #       statement. Work on removing that technial debt.
+        tidyData <- select(tidyData, Subject, ActivityCode, V1:V543)
+        
+        #
+        # Step 3. Name the activities with descriptive activity names
+        #
+        
+        # Load the activity labels
+        actLabels <- read.table("./activity_labels.txt", sep=" ", header=FALSE)
+        colnames(actLabels) <- c("ActivityCode", "ActivityFactor")
+        
+        # merge the labels with the activities
+        tidyData <- merge(tidyData, actLabels, by="ActivityCode", all=TRUE)
         
         #
         # Return: return the tidy data set
